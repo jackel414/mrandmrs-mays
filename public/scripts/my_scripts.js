@@ -1,55 +1,31 @@
-$(document).ready(function() {
-	dialog_boxes();
+$(function() {
+  var form = $('#ajax-song');
+  var formMessages = $('#form-messages');
 
-	$(function() {
-		$('#panel1Link').on("click", function() {
-			//$('#panel1Content').dialog("open");
-			scrollToAnchor('skills');
+	$(form).submit(function(event) {
+	  event.preventDefault();
+	  var formData = $(form).serialize();
+		
+		$.ajax({
+			type: 'POST',
+			url: $(form).attr('action'),
+			data: formData
+		}).done(function(response) {
+			$(formMessages).removeClass('has-error');
+			$(formMessages).addClass('text-success');
+			$(formMessages).text(response);
+
+			$('#song_name').val('');
+			$('#requestor').val('');
+		}).fail(function(data) {
+			$(formMessages).removeClass('text-success');
+			$(formMessages).addClass('has-error');
+
+			if (data.responseText !== '') {
+			  $(formMessages).text(data.responseText);
+			} else {
+			  $(formMessages).text('Oops! An error occured and your message could not be sent.');
+			}
 		});
-	})	
-
-	$(function() {
-		$('#panel2Link').on("click", function() {
-			//$('#panel2Content').dialog("open");
-			scrollToAnchor('travel');
-		});		
-	})
-
-	$(function() {
-		$('#panel3Link').on("click", function() {
-			//$('#panel3Content').dialog("open");
-			scrollToAnchor('music');
-		});		
-	})
-
-	$(function() {
-		$('#panel4Link').on("click", function() {
-			//$('#panel4Content').dialog("open");
-			scrollToAnchor('wine');
-		});		
-	})
-	
-	$(function() {
-		$('.homeLink').on("click", function() {
-			//$('#panel4Content').dialog("open");
-			scrollToAnchor('home');
-		});		
-	})
+	});
 });
-
-function scrollToAnchor(aid){
-    var aTag = $("a[name='"+ aid +"']");
-    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
-}
-
-function dialog_boxes() {
-	for(var i = 1; i < 5; i++){
-		var hook = 'panel' + i + 'Content';
-		$('#' + hook).dialog({
-			autoOpen: false,
-			height: 650,
-			width: 700,
-			modal: true,
-		});		
-	}	
-};
