@@ -3,7 +3,7 @@ Bundler.require
 
 require './model'
 
-class ZacharyMays < Sinatra::Base
+class MrandMrsMays < Sinatra::Base
   use Rack::Session::Cookie, :secret => "mysecretcode"
   use Rack::Flash, :accessorize => [:error, :success]
 
@@ -16,7 +16,7 @@ class ZacharyMays < Sinatra::Base
     @song = Song.new(:song_name => params[:song_name], :requestor => params[:requestor], :created => Time.now)
     @song.save
     flash[:notice] = "Thanks for the suggestion!"
-    redirect '/wedding'
+    redirect '/'
   end
 
 end
