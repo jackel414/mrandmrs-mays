@@ -1,6 +1,7 @@
 $(function() {
   var form = $('#ajax-song');
   var formMessages = $('#form-messages');
+  var formResponse = $('#form-response')
 
 	$(form).submit(function(event) {
 	  event.preventDefault();
@@ -15,7 +16,8 @@ $(function() {
 			$(formMessages).addClass('text-success');
 			$(formMessages).text(response);
 			$(form).addClass('collapse');
-			
+			$(formResponse).show();
+
 
 			$('#song_name').val('');
 			$('#requestor').val('');
@@ -30,4 +32,10 @@ $(function() {
 			}
 		});
 	});
+
+	$('#anotherSong').click(function(event) {
+		event.preventDefault();
+		$(formResponse).hide();
+		$(form).show();
+	})
 });

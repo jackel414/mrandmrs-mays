@@ -4,7 +4,10 @@
 .container
   %p{:class => 'lead'}
     Please use the form below to RSVP (and suggest a song, if you'd like)!
-  %div{:id => 'form-messages'}
+  %div{:id => 'form-response', :class => 'collapse form-signin'}
+    %p{:class => 'lead', :id => 'form-messages'}
+    %p{:class => 'lead'}
+      %a{:href => '#', :id => 'anotherSong'}Add another song
   %form{:class => 'form-signin', :role => 'form', :action => '/submit_song', :method => 'post', :id => 'ajax-song'}
     %h2{:class => 'form-signin-heading'}Suggest A Song:
     %div{:class => 'form-group'}
