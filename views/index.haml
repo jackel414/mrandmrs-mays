@@ -1,13 +1,6 @@
-%p{:class => 'lead'}
-  This is the page for our wedding!
--if flash[:notice]
-  %div{:style => "color: green"}
-    =flash[:notice]
-%div{:id => 'form-messages'}
-%form{:class => 'form-signin', :role => 'form', :action => '/submit_song', :method => 'post', :id => 'ajax-song'}
-  %h2{:class => 'form-signin-heading'}Suggest A Song:
-  %div{:class => 'form-group'}
-    %input{:class => 'form-control', :placeholder => 'Song Name & Artist', :required => '', :name => 'song_name', :id => 'song_name'}
-  %div{:class => 'form-group'}
-    %input{:class => 'form-control', :placeholder => 'Your Name', :required => '', :type => 'text', :name => 'requestor', :id => 'requestor'}
-  %button{:class => ['btn btn btn-lg btn-primary btn-block'], :type => 'submit'}Submit      
+.jumbotron{:id => 'home'}
+  .container
+
+.container
+  %p{:class => 'lead'}
+    This is the page for our wedding!

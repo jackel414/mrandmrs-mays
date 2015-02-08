@@ -14,6 +14,8 @@ $(function() {
 			$(formMessages).removeClass('has-error');
 			$(formMessages).addClass('text-success');
 			$(formMessages).text(response);
+			$(form).addClass('collapse');
+			
 
 			$('#song_name').val('');
 			$('#requestor').val('');
