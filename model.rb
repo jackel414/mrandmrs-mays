@@ -12,6 +12,21 @@ class Song
   property :created, DateTime
 end
 
+class Guest
+	include DataMapper::Resource
+
+	property :id, Serial
+	property :yes_attendees, Text
+	property :no_attendees, Text
+	property :contact_email, Text, :required => true
+	property :red_wine_drinkers, Integer, :required => true
+	property :white_wine_drinkers, Integer, :required => true
+	property :beer_drinkers, Integer, :required => true
+	property :dietary_restriction, Boolean
+	property :dietary_restriction_details, Text
+	property :created, DateTime
+end
+
 # Tell DataMapper the models are done being defined
 DataMapper.finalize
 

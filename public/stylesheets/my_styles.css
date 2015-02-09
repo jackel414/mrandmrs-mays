@@ -18,3 +18,7 @@
 #rsvp {
   background: url('/rsvp.jpg') no-repeat center center;
 }
+
+.bottom_buffer {
+	margin-bottom: 40px;
+}

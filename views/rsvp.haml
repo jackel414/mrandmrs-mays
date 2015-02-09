@@ -2,16 +2,57 @@
   .container
 
 .container
-  %p{:class => 'lead'}
-    Please use the form below to RSVP (and suggest a song, if you'd like)!
-  %div{:id => 'form-response', :class => 'collapse form-signin'}
-    %p{:class => 'lead', :id => 'form-messages'}
+  %p{:class => 'lead', :id => 'rsvp_text'}
+    Please RSVP using the below form:
+  %div{:class => 'collapse', :id => 'rsvp_response'}
+    %p{:class => 'lead', :id => 'rsvp_response_text'}
+  /rsvp form
+  %form{:class => 'col-sm-8', :role => 'form', :action => '/rsvp', :method => 'post', :id => 'ajax-rsvp'}
+    %div{:class => 'form-group'}
+      %label{:for => 'yes_attendees'}Names Of Invitees You Are RSVPing ‘Yes' On Behalf Of:
+      %input{:class => 'form-control', :placeholder => 'Name(s)', :required => '', :id => 'yes_attendees', :type => 'text'}
+    %div{:class => 'form-group'}
+      %label{:for => 'no_attendees'}Names Of Invitees You Are RSVPing ‘No' On Behalf Of:
+      %input{:class => 'form-control', :placeholder => 'Name(s)', :required => '', :id => 'no_attendees', :type => 'text'}
+    %div{:class => 'form-group'}
+      %label{:for => 'contact_email'}Contact Email:
+      %input{:class => 'form-control', :placeholder => 'Email', :required => '', :id => 'contact_email', :type => 'email'}
+    %p
+      Please indicate the number of members in your party who will drink the following (don't worry, you can answer for yourself more than once!):
+    %div{:class => 'row'}
+      %div{:class => 'form-group col-sm-3'}
+        %label{:for => 'red_wine_drinkers'}Red Wine:
+        %input{:class => 'form-control', :placeholder => 'Red Wine', :required => '', :id => 'red_wine_drinkers', :type => 'text'}
+      %div{:class => 'form-group col-sm-3'}
+        %label{:for => 'white_wine_drinkers'}White Wine:
+        %input{:class => 'form-control', :placeholder => 'White Wine', :required => '', :id => 'white_wine_drinkers', :type => 'text'}
+      %div{:class => 'form-group col-sm-3'}
+        %label{:for => 'beer_drinkers'}Beer:
+        %input{:class => 'form-control', :placeholder => 'Beer', :required => '', :id => 'beer_drinkers', :type => 'text'}
+    %div{:class => 'checkbox'}
+      %label
+        %input{:type => 'checkbox', :id => 'dietary_restriction'}A Member of my Party have a Dietary Restriction
+    %div{:class => 'form-group collapse'}
+      %label{:for => 'dietary_restriction_details'}Dietary Restriction Details
+      %input{:class => 'form-control', :placeholder => 'Details', :id => 'dietary_restriction_details', :type => 'text'}
+    %button{:class => 'btn btn-default', :type => 'submit'}Submit
+  
+  %div{:class => 'row bottom_buffer'}
+
+  /song request form and feedback
+  %p{:class => 'lead', :id => 'song_text'}
+    We would love to get song request from everyone. If there is a specific song you'd like to hear, let us know below!
+  %div{:id => 'song_response', :class => 'collapse'}
+    %p{:class => 'lead', :id => 'song_response_text'}
     %p{:class => 'lead'}
       %a{:href => '#', :id => 'anotherSong'}Add another song
-  %form{:class => 'form-signin', :role => 'form', :action => '/submit_song', :method => 'post', :id => 'ajax-song'}
-    %h2{:class => 'form-signin-heading'}Suggest A Song:
+  %form{:class => 'col-sm-8', :role => 'form', :action => '/submit_song', :method => 'post', :id => 'ajax-song'}
     %div{:class => 'form-group'}
-      %input{:class => 'form-control', :placeholder => 'Song Name & Artist', :required => '', :name => 'song_name', :id => 'song_name'}
+      %label{:for => 'song_name'}Song Name & Artist:
+      %input{:class => 'form-control', :placeholder => 'Name / Artist', :required => '', :id => 'song_name'}
     %div{:class => 'form-group'}
-      %input{:class => 'form-control', :placeholder => 'Your Name', :required => '', :type => 'text', :name => 'requestor', :id => 'requestor'}
-    %button{:class => ['btn btn btn-lg btn-primary btn-block'], :type => 'submit'}Submit      
+      %label{:for => 'song_name'}Requested By:
+      %input{:class => 'form-control', :placeholder => 'Your Name', :required => '', :type => 'text', :id => 'requestor'}
+    %button{:class => 'btn btn-default', :type => 'submit'}Submit
+
+  %div{:class => 'row bottom_buffer'}

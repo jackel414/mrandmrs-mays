@@ -30,8 +30,13 @@ class MrandMrsMays < Sinatra::Base
   post '/submit_song' do
     @song = Song.new(:song_name => params[:song_name], :requestor => params[:requestor], :created => Time.now)
     @song.save
-    return 'Thank you!'
-    #flash[:notice] = "Thanks for the suggestion!"
+    return 'Thanks for the suggestion!'
+  end
+
+  post '/rsvp' do
+    @guest = Guest.new(:yes_attendees => params[:yes_attendees], :no_attendees => params[:no_attendees], :contact_email => params[:contact_email], :red_wine_drinkers => params[:red_wine_drinkers], :white_wine_drinkers => params[:white_wine_drinkers], :beer_drinkers => params[:beer_drinkers], :dietary_restriction => params[:dietary_restriction], :dietary_restriction_details => params[:dietary_restriction_details], :created => Time.now)
+    @guest.save
+    return 'Thanks for RSVPing!'
   end
 
 end

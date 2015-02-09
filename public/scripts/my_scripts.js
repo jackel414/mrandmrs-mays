@@ -1,41 +1,69 @@
 $(function() {
-  var form = $('#ajax-song');
-  var formMessages = $('#form-messages');
-  var formResponse = $('#form-response')
+  var rsvpForm = $('#ajax-rsvp');
+  var rsvpText = $('#rsvp_text');
+  var rsvpResponse = $('#rsvp_response');
+  var rsvpResponseText = $('#rsvp_response_text');
 
-	$(form).submit(function(event) {
+  var songForm = $('#ajax-song');
+  var songText = $('#song_text');
+  var songResponse = $('#song_response');
+  var songResponseText = $('#song_response_text');
+
+  $(rsvpForm).submit(function(event) {
+  	event.preventDefault();
+  	var formData = $(rsvpForm).serialize();
+
+  	$.ajax({
+  		type: 'POST',
+  		url: $(rsvpForm).attr('action'),
+  		data: formData
+
+  	}).done(function(response) {
+  		$(rsvpForm).hide();
+  		$(rsvpText).hide();
+  		$(rsvpResponse).show();
+  		$(rsvpResponseText).text(response);
+
+  	}).fail(function(data) {
+  		$(rsvpResponse).show();  		
+			if (data.responseText !== '') {
+			  $(rsvpResponseText).text(data.responseText);
+			} else {
+			  $(rsvpResponseText).text('Oops! An error occured and your message could not be sent.');
+			} 
+  	});
+  });
+
+	$(songForm).submit(function(event) {
 	  event.preventDefault();
-	  var formData = $(form).serialize();
+	  var formData = $(songForm).serialize();
 		
 		$.ajax({
 			type: 'POST',
-			url: $(form).attr('action'),
+			url: $(songForm).attr('action'),
 			data: formData
 		}).done(function(response) {
-			$(formMessages).removeClass('has-error');
-			$(formMessages).addClass('text-success');
-			$(formMessages).text(response);
-			$(form).addClass('collapse');
-			$(formResponse).show();
+			$(songForm).hide();
+			$(songText).hide();
+			$(songResponseText).text(response);
+			$(songResponse).show();
 
 
 			$('#song_name').val('');
 			$('#requestor').val('');
 		}).fail(function(data) {
-			$(formMessages).removeClass('text-success');
-			$(formMessages).addClass('has-error');
-
+  		$(songResponse).show();  		
 			if (data.responseText !== '') {
-			  $(formMessages).text(data.responseText);
+			  $(songResponseText).text(data.responseText);
 			} else {
-			  $(formMessages).text('Oops! An error occured and your message could not be sent.');
+			  $(songResponseText).text('Oops! An error occured and your message could not be sent.');
 			}
 		});
 	});
 
 	$('#anotherSong').click(function(event) {
 		event.preventDefault();
-		$(formResponse).hide();
-		$(form).show();
+		$(songResponse).hide();
+		$(songForm).show();
 	})
 });
