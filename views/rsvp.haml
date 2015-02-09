@@ -9,32 +9,32 @@
   /rsvp form
   %form{:class => 'col-sm-8', :role => 'form', :action => '/rsvp', :method => 'post', :id => 'ajax-rsvp'}
     %div{:class => 'form-group'}
-      %label{:for => 'yes_attendees'}Names Of Invitees You Are RSVPing ‘Yes' On Behalf Of:
-      %input{:class => 'form-control', :placeholder => 'Name(s)', :required => '', :id => 'yes_attendees', :type => 'text'}
+      %label{:for => 'yes_attendees'}Names Of Invitees You Are RSVPing ‘Yes' On Behalf Of (if any):
+      %input{:class => 'form-control', :placeholder => 'Name(s)', :required => '', :id => 'yes_attendees', :name => 'yes_attendees', :type => 'text'}
     %div{:class => 'form-group'}
-      %label{:for => 'no_attendees'}Names Of Invitees You Are RSVPing ‘No' On Behalf Of:
-      %input{:class => 'form-control', :placeholder => 'Name(s)', :required => '', :id => 'no_attendees', :type => 'text'}
+      %label{:for => 'no_attendees'}Names Of Invitees You Are RSVPing ‘No' On Behalf Of (if any):
+      %input{:class => 'form-control', :placeholder => 'Name(s)', :required => '', :id => 'no_attendees', :name => 'no_attendees', :type => 'text'}
     %div{:class => 'form-group'}
       %label{:for => 'contact_email'}Contact Email:
-      %input{:class => 'form-control', :placeholder => 'Email', :required => '', :id => 'contact_email', :type => 'email'}
+      %input{:class => 'form-control', :placeholder => 'Email', :required => '', :id => 'contact_email', :name => 'contact_email', :type => 'email'}
     %p
       Please indicate the number of members in your party who will drink the following (don't worry, you can answer for yourself more than once!):
     %div{:class => 'row'}
       %div{:class => 'form-group col-sm-3'}
         %label{:for => 'red_wine_drinkers'}Red Wine:
-        %input{:class => 'form-control', :placeholder => 'Red Wine', :required => '', :id => 'red_wine_drinkers', :type => 'text'}
+        %input{:class => 'form-control', :placeholder => 'Red Wine', :required => '', :id => 'red_wine_drinkers', :name => 'red_wine_drinkers', :type => 'text'}
       %div{:class => 'form-group col-sm-3'}
         %label{:for => 'white_wine_drinkers'}White Wine:
-        %input{:class => 'form-control', :placeholder => 'White Wine', :required => '', :id => 'white_wine_drinkers', :type => 'text'}
+        %input{:class => 'form-control', :placeholder => 'White Wine', :required => '', :id => 'white_wine_drinkers', :name => 'white_wine_drinkers', :type => 'text'}
       %div{:class => 'form-group col-sm-3'}
         %label{:for => 'beer_drinkers'}Beer:
-        %input{:class => 'form-control', :placeholder => 'Beer', :required => '', :id => 'beer_drinkers', :type => 'text'}
+        %input{:class => 'form-control', :placeholder => 'Beer', :required => '', :id => 'beer_drinkers', :name => 'beer_drinkers', :type => 'text'}
     %div{:class => 'checkbox'}
       %label
-        %input{:type => 'checkbox', :id => 'dietary_restriction'}A Member of my Party have a Dietary Restriction
-    %div{:class => 'form-group collapse'}
+        %input{:type => 'checkbox', :id => 'dietary_restriction', :name => 'dietary_restriction', :value => '1'}A Member of my Party have a Dietary Restriction
+    %div{:class => 'form-group collapse', :id => 'dietary_restriction_box'}
       %label{:for => 'dietary_restriction_details'}Dietary Restriction Details
-      %input{:class => 'form-control', :placeholder => 'Details', :id => 'dietary_restriction_details', :type => 'text'}
+      %input{:class => 'form-control', :placeholder => 'Details', :id => 'dietary_restriction_details', :name => 'dietary_restriction_details', :type => 'text'}
     %button{:class => 'btn btn-default', :type => 'submit'}Submit
   
   %div{:class => 'row bottom_buffer'}
@@ -49,10 +49,10 @@
   %form{:class => 'col-sm-8', :role => 'form', :action => '/submit_song', :method => 'post', :id => 'ajax-song'}
     %div{:class => 'form-group'}
       %label{:for => 'song_name'}Song Name & Artist:
-      %input{:class => 'form-control', :placeholder => 'Name / Artist', :required => '', :id => 'song_name'}
+      %input{:class => 'form-control', :placeholder => 'Name / Artist', :required => '', :id => 'song_name', :name => 'song_name'}
     %div{:class => 'form-group'}
       %label{:for => 'song_name'}Requested By:
-      %input{:class => 'form-control', :placeholder => 'Your Name', :required => '', :type => 'text', :id => 'requestor'}
+      %input{:class => 'form-control', :placeholder => 'Your Name', :required => '', :type => 'text', :id => 'requestor', :name => 'requestor'}
     %button{:class => 'btn btn-default', :type => 'submit'}Submit
 
   %div{:class => 'row bottom_buffer'}

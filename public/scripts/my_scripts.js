@@ -11,12 +11,12 @@ $(function() {
 
   $(rsvpForm).submit(function(event) {
   	event.preventDefault();
-  	var formData = $(rsvpForm).serialize();
+  	var rsvpFormData = $(rsvpForm).serialize();
 
   	$.ajax({
   		type: 'POST',
   		url: $(rsvpForm).attr('action'),
-  		data: formData
+  		data: rsvpFormData
 
   	}).done(function(response) {
   		$(rsvpForm).hide();
@@ -36,12 +36,12 @@ $(function() {
 
 	$(songForm).submit(function(event) {
 	  event.preventDefault();
-	  var formData = $(songForm).serialize();
+	  var songFormData = $(songForm).serialize();
 		
 		$.ajax({
 			type: 'POST',
 			url: $(songForm).attr('action'),
-			data: formData
+			data: songFormData
 		}).done(function(response) {
 			$(songForm).hide();
 			$(songText).hide();
@@ -65,5 +65,9 @@ $(function() {
 		event.preventDefault();
 		$(songResponse).hide();
 		$(songForm).show();
+	});
+
+	$('#dietary_restriction').change(function() {
+		$('#dietary_restriction_box').toggle();
 	})
 });
