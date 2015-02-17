@@ -3,9 +3,22 @@
   border: none;
 }
 
-#home {
-  background: url('/home-background.jpg') no-repeat center center;
+@media (min-width: 368px) {
+  #home {
+  	background: url('/rose-lincoln.jpg') no-repeat center center;
+  }
+  #venue {
+  }
 }
+@media (min-width: 1230px) {
+  #home {
+  	background: url('/home-background.jpg') no-repeat center center;
+  }
+  #venue {
+  }
+}
+
+
 
 #venue {
   background: url('/venue.jpg') no-repeat center center;

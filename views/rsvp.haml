@@ -2,12 +2,12 @@
   .container
 
 .container
-  %p{:class => 'lead', :id => 'rsvp_text'}
+  %p{:class => 'lead collapse', :id => 'rsvp_text'}
     Please RSVP using the below form:
   %div{:class => 'collapse', :id => 'rsvp_response'}
     %p{:class => 'lead', :id => 'rsvp_response_text'}
   /rsvp form
-  %form{:class => 'col-sm-8', :role => 'form', :action => '/rsvp', :method => 'post', :id => 'ajax-rsvp'}
+  %form{:class => 'col-sm-8 collapse', :role => 'form', :action => '/rsvp', :method => 'post', :id => 'ajax-rsvp'}
     %div{:class => 'form-group'}
       %label{:for => 'yes_attendees'}Names Of Invitees You Are RSVPing ‘Yes' On Behalf Of (if any):
       %input{:class => 'form-control', :placeholder => 'Name(s)', :required => '', :id => 'yes_attendees', :name => 'yes_attendees', :type => 'text'}
