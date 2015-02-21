@@ -3,13 +3,6 @@
   border: none;
 }
 
-@media (min-width: 368px) {
-  #home {
-  	background: url('/home-background.jpg') no-repeat center center;
-  }
-  #venue {
-  }
-}
 @media (min-width: 1230px) {
   #home {
   	background: url('/home-background.jpg') no-repeat center center;
@@ -17,7 +10,51 @@
   #venue {
   }
 }
-
+@media (min-width: 996px) {
+  #img-map-1 {
+  	background: url('/map-1-resize.png') no-repeat center center;
+  }
+  #img-map-2 {
+  	background: url('/map-2-resize.png') no-repeat center center;
+  }
+  #img-lakeside {
+  	background: url('/lakeside-resize.png') no-repeat center center;
+  }	
+	#img-map-1, #img-map-2, #img-lakeside {
+		height: 400px;
+	}
+}
+@media (min-width: 368px) {
+  #home {
+  	background: url('/home-background.jpg') no-repeat center center;
+  }
+  #venue {
+  }
+}
+@media (min-width: 0) {
+  #img-map-1 {
+  	background: url('/map-1-xs.png') no-repeat center center;
+  }
+  #img-map-2 {
+  	background: url('/map-2-xs.png') no-repeat center center;
+  }
+  #img-lakeside {
+  	background: url('/lakeside-xs.png') no-repeat center center;
+  }	
+	#img-map-1, #img-map-2, #img-lakeside {
+		height: 250px;
+	}
+	#img-inn {
+		background: url('/wolfeboro-inn-xs.jpg') no-repeat center center;
+		height: 231px;
+	}
+}
+@media (min-width: 517px) {
+	#img-inn {
+		background: url('/wolfeboro-inn.jpg') no-repeat center center;
+		height: 292px;
+	}
+}
 
 
 #venue {
