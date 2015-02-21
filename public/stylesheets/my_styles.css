@@ -5,7 +5,7 @@
 
 @media (min-width: 368px) {
   #home {
-  	background: url('/rose-lincoln.jpg') no-repeat center center;
+  	background: url('/home-background.jpg') no-repeat center center;
   }
   #venue {
   }
@@ -34,4 +34,8 @@
 
 .bottom_buffer {
 	margin-bottom: 40px;
+}
+
+.img-container {
+	text-align: center;
 }
