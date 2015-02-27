@@ -45,13 +45,13 @@
 		height: 250px;
 	}
 	#img-inn {
-		background: url('/wolfeboro-inn-xs.jpg') no-repeat center center;
+		background: url('/topsides-xs.jpg') no-repeat center center;
 		height: 231px;
 	}
 }
 @media (min-width: 517px) {
 	#img-inn {
-		background: url('/wolfeboro-inn.jpg') no-repeat center center;
+		background: url('/topsides.jpg') no-repeat center center;
 		height: 292px;
 	}
 }
