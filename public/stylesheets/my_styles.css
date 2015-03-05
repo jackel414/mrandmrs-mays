@@ -4,21 +4,16 @@
 }
 
 @media (min-width: 1230px) {
-  #home {
-  	background: url('/home-background.jpg') no-repeat center center;
-  }
-  #venue {
-  }
 }
 @media (min-width: 996px) {
   #img-map-1 {
-  	background: url('/map-1-resize.png') no-repeat center center;
+  	background: url('/img/map-1-resize.png') no-repeat center center;
   }
   #img-map-2 {
-  	background: url('/map-2-resize.png') no-repeat center center;
+  	background: url('/img/map-2-resize.png') no-repeat center center;
   }
   #img-lakeside {
-  	background: url('/lakeside-resize.png') no-repeat center center;
+  	background: url('/img/lakeside-resize.png') no-repeat center center;
   }	
 	#img-map-1, #img-map-2, #img-lakeside {
 		height: 400px;
@@ -26,47 +21,55 @@
 }
 @media (min-width: 368px) {
   #home {
-  	background: url('/home-background.jpg') no-repeat center center;
+  	background: url('/img/home-background.jpg') no-repeat center center;
   }
   #venue {
   }
 }
 @media (min-width: 0) {
   #img-map-1 {
-  	background: url('/map-1-xs.png') no-repeat center center;
+  	background: url('/img/map-1-xs.png') no-repeat center center;
   }
   #img-map-2 {
-  	background: url('/map-2-xs.png') no-repeat center center;
+  	background: url('/img/map-2-xs.png') no-repeat center center;
   }
   #img-lakeside {
-  	background: url('/lakeside-xs.png') no-repeat center center;
+  	background: url('/img/lakeside-xs.png') no-repeat center center;
   }	
 	#img-map-1, #img-map-2, #img-lakeside {
 		height: 250px;
 	}
 	#img-inn {
-		background: url('/topsides-xs.jpg') no-repeat center center;
+		background: url('/img/topsides-xs.jpg') no-repeat center center;
 		height: 231px;
 	}
+  #img-zack-and-jess {
+    background: url('/img/zack-and-jess-xs.jpg') no-repeat center center;
+    height: 380px;
+  }
 }
 @media (min-width: 517px) {
 	#img-inn {
-		background: url('/topsides.jpg') no-repeat center center;
+		background: url('/img/topsides.jpg') no-repeat center center;
 		height: 292px;
 	}
+  #img-zack-and-jess {
+    background: url('/img/zack-and-jess.jpg') no-repeat center center;
+    height: 480px;
+  }  
 }
 
 
 #venue {
-  background: url('/venue.jpg') no-repeat center center;
+  background: url('/img/venue.jpg') no-repeat center center;
 }
 
 #staying {
-  background: url('/staying.jpg') no-repeat center center;
+  background: url('/img/staying.jpg') no-repeat center center;
 }
 
 #rsvp {
-  background: url('/rsvp.jpg') no-repeat center center;
+  background: url('/img/rsvp.jpg') no-repeat center center;
 }
 
 .bottom_buffer {
