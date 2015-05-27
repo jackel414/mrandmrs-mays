@@ -1,0 +1,32 @@
+!!!
+%html{:lang => 'en'}
+    %head
+        %meta{'http-equiv' => 'content-type', :content => 'text/html', :charset => 'utf-8'}
+        %meta{:name => 'viewport', :content => 'width=device-width, initial-scale=1'}
+        %meta{:name => 'description', :content => ''}
+        %meta{:name => 'author', :content => ''}
+        /%link{:rel => 'shortcut icon', :href => 'http://getbootstrap.com/assets/ico/favicon.ico'}
+        %title
+            = @title
+        %link{:rel => "stylesheet", :href => "stylesheets/bootstrap.css"}
+        %link{:rel => "stylesheet", :href => "stylesheets/new_styles.css"}
+        %link{:rel => "stylesheet", :href => "stylesheets/jquery-ui.min.css"}
+        %script{:type => "text/javascript", :src => "scripts/jquery.min.js"}
+        %script{:type => "text/javascript", :src => "scripts/jquery-ui-1.10.4.custom.min.js"}
+        %script{:type => "text/javascript", :src  => "scripts/bootstrap.js"}
+        %script{:type => "text/javascript", :src => "https://www.google.com/jsapi"}
+        %script{:type => "text/javascript", :src  => "scripts/my_scripts.js"}
+    %body
+        %div{:id => 'header'}
+            %div{:class => 'header-text col-sm-4 col-sm-offset-4'}
+            %div{:class => 'header-menu col-sm-6 col-sm-offset-3'}
+                %ul{:class => 'nav'}
+                    %li
+                        %a{:href => '/home'}our wedding
+                    %li
+                        %a{:href => '/details'}details
+                    %li
+                        %a{:href => '/photos'}photos
+                    %li
+                        %a{:href => '/registry'}registry
+            =yield

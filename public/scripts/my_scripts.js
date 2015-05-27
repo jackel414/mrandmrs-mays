@@ -70,4 +70,10 @@ $(function() {
 	$('#dietary_restriction').change(function() {
 		$('#dietary_restriction_box').toggle();
 	})
+	
+	$(".nav li a").click(function(event) {
+    	event.preventDefault();
+    	$(this).closest("ul").find("a").removeClass("active");
+    	$(this).addClass("active");
+	});
 });

@@ -1,0 +1,35 @@
+@import url(http://fonts.googleapis.com/css?family=Muli:300);
+
+html {
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+}
+
+.header-text {
+  	background: url('/img/header-image.png') no-repeat center center;
+  	height: 130px;
+}
+
+.header-menu {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.header-menu li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.header-menu li a {
+    color: #000000;
+    font-size: 19px;
+    font-style: normal;
+}
+
+.header-menu li a:hover,
+.header-menu li a.active {
+    color: #999999;
+    background: none;
+}
