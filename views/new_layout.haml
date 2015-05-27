@@ -17,16 +17,18 @@
         %script{:type => "text/javascript", :src => "https://www.google.com/jsapi"}
         %script{:type => "text/javascript", :src  => "scripts/my_scripts.js"}
     %body
-        %div{:id => 'header'}
+        %div{:id => 'header', :class => 'row'}
             %div{:class => 'header-text col-sm-4 col-sm-offset-4'}
             %div{:class => 'header-menu col-sm-6 col-sm-offset-3'}
                 %ul{:class => 'nav'}
                     %li
-                        %a{:href => '/home'}our wedding
+                        %a{:href => '/', :class => "#{@home_active}"}our wedding
                     %li
-                        %a{:href => '/details'}details
+                        %a{:href => '/details', :class => "#{@details_active}"}details
                     %li
-                        %a{:href => '/photos'}photos
+                        %a{:href => '/photos', :class => "#{@photos_active}"}photos
                     %li
-                        %a{:href => '/registry'}registry
+                        %a{:href => '/registry', :class => "#{@registry_active}"}registry
             =yield
+        %p
+            &nbsp;

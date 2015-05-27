@@ -9,7 +9,8 @@ class MrandMrsMays < Sinatra::Base
     
     get '/' do
         @title = 'The Mays Wedding | Home'
-        haml :index
+        @home_active = 'active'
+        haml :new_index, :layout => :new_layout
     end
     
     get '/venue' do
@@ -39,8 +40,23 @@ class MrandMrsMays < Sinatra::Base
         return 'Thanks for RSVPing!'
     end
     
-    get '/new_index' do
-        @title = 'New Wedding Page'
-        haml :new_index, :layout => :new_layout
+    #new sections
+    
+    get '/details' do
+        @title = 'The Mays Wedding | Details'
+        @details_active = 'active'
+        haml :details, :layout => :new_layout
+    end
+    
+    get '/photos' do
+        @title = 'The Mays Wedding | Photos'
+        @photos_active = 'active'
+        haml :photos, :layout => :new_layout
+    end
+    
+    get '/registry' do
+        @title = 'The Mays Wedding | Registry'
+        @registry_active = 'active'
+        haml :registry, :layout => :new_layout
     end
 end

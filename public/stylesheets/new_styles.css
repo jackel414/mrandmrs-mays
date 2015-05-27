@@ -8,7 +8,7 @@ body {
 }
 
 .header-text {
-  	background: url('/img/header-image.png') no-repeat center center;
+  	background: url('/img/top-image.png') no-repeat center center;
   	height: 130px;
 }
 
@@ -19,7 +19,7 @@ body {
 
 .header-menu li {
     display: inline-block;
-    padding: 0 10px;
+    padding: 0;
 }
 
 .header-menu li a {
@@ -32,4 +32,16 @@ body {
 .header-menu li a.active {
     color: #999999;
     background: none;
+}
+
+.home-container {
+    border: 1px solid #cccccc;
+    height: 600px;
+    margin-top: 40px;
+}
+
+.home-image-container {
+    height: 100%;
+  	background: url('/img/front-image.png') no-repeat center top;
+  	margin-top: 20px;
 }
