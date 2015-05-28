@@ -5,6 +5,7 @@ html {
 
 body {
     font-family: 'Muli', sans-serif;
+    font-size: 19px;
 }
 
 .header-text {
@@ -24,7 +25,6 @@ body {
 
 .header-menu li a {
     color: #000000;
-    font-size: 19px;
     font-style: normal;
 }
 
@@ -34,14 +34,31 @@ body {
     background: none;
 }
 
-.home-container {
-    border: 1px solid #cccccc;
-    height: 600px;
+.home-outer-container {
+    height: 650px;
     margin-top: 40px;
 }
 
-.home-image-container {
+.home-inner-container {
     height: 100%;
+    border: 1px solid #cccccc;
+    margin: 0 50px;
+}
+
+.home-image-container {
   	background: url('/img/front-image.png') no-repeat center top;
+  	height: 475px;
   	margin-top: 20px;
+}
+
+.home-text-container {
+    text-align: center;
+}
+
+.home-text-container h1 {
+    font-weight: bold;
+}
+
+.home-text-container p {
+    
 }
