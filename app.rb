@@ -10,17 +10,13 @@ class MrandMrsMays < Sinatra::Base
     get '/' do
         @title = 'The Mays Wedding | Home'
         @home_active = 'active'
-        haml :new_index, :layout => :new_layout
+        haml :index
     end
     
-    get '/venue' do
-        @title = 'The Mays Wedding | Venue'
-        haml :venue
-    end
-    
-    get '/staying' do
-        @title = 'The Mays Wedding | Staying'
-        haml :staying
+    get '/details' do
+        @title = 'The Mays Wedding | Details'
+        @details_active = 'active'
+        haml :details
     end
     
     get '/rsvp' do
@@ -40,23 +36,15 @@ class MrandMrsMays < Sinatra::Base
         return 'Thanks for RSVPing!'
     end
     
-    #new sections
-    
-    get '/details' do
-        @title = 'The Mays Wedding | Details'
-        @details_active = 'active'
-        haml :details, :layout => :new_layout
+    get '/registry' do
+        @title = 'The Mays Wedding | Registry'
+        @registry_active = 'active'
+        haml :registry
     end
     
     get '/photos' do
         @title = 'The Mays Wedding | Photos'
         @photos_active = 'active'
-        haml :photos, :layout => :new_layout
-    end
-    
-    get '/registry' do
-        @title = 'The Mays Wedding | Registry'
-        @registry_active = 'active'
-        haml :registry, :layout => :new_layout
+        haml :photos
     end
 end
