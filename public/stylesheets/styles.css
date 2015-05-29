@@ -4,12 +4,16 @@ html {
 
 body {
     font-family: 'Muli', sans-serif;
-    font-size: 19px;
+    font-size: 16px;
 }
 
 .header-text {
   	background: url('/img/top-image.png') no-repeat center center;
   	height: 130px;
+}
+
+.large-paragraph {
+    font-size: 19px;
 }
 
 .header-menu {
@@ -72,9 +76,14 @@ body {
 #house-pic {
   	background: url('/img/house.jpg') no-repeat center top;
   	height: 385px;
+  	margin-top: 50px;
 }
 
 .separator {
   	background: url('/img/separator.png') no-repeat center center;
   	height: 100px;
+}
+
+.question-header {
+    margin: 40px 0 10px;
 }
