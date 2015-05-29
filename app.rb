@@ -1,4 +1,5 @@
 require 'bundler'
+require 'date'
 Bundler.require
 
 require './model'
@@ -10,6 +11,9 @@ class MrandMrsMays < Sinatra::Base
     get '/' do
         @title = 'The Mays Wedding | Home'
         @home_active = 'active'
+        @eventDate = Date.parse("08/29/2015")
+        @currentDate = DateTime.now
+        @daysToEvent = (@eventDate - @currentDate).to_i
         haml :index
     end
     
