@@ -1,4 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Muli:300);
 
 html {
 }
@@ -36,7 +35,6 @@ body {
 
 .home-outer-container {
     height: 650px;
-    margin-top: 40px;
 }
 
 .home-inner-container {
@@ -56,9 +54,27 @@ body {
 }
 
 .home-text-container h1 {
-    font-weight: bold;
+    font-family: 'AmericanTypewriter-CondensedLight';
 }
 
 .home-text-container p {
     
+}
+
+.cursive {
+    font-family: 'Alex Brush', cursive;
+}
+
+.top-buffer {
+    margin-top: 40px;
+}
+
+#house-pic {
+  	background: url('/img/house.jpg') no-repeat center top;
+  	height: 385px;
+}
+
+.separator {
+  	background: url('/img/separator.png') no-repeat center center;
+  	height: 100px;
 }

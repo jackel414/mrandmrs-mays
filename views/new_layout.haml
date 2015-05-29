@@ -9,6 +9,7 @@
         %title
             = @title
         %link{:rel => "stylesheet", :href => "stylesheets/bootstrap.css"}
+        %link{:rel => "stylesheet", :href => "stylesheets/fonts.css"}
         %link{:rel => "stylesheet", :href => "stylesheets/new_styles.css"}
         %link{:rel => "stylesheet", :href => "stylesheets/jquery-ui.min.css"}
         %script{:type => "text/javascript", :src => "scripts/jquery.min.js"}
@@ -26,9 +27,11 @@
                     %li
                         %a{:href => '/details', :class => "#{@details_active}"}details
                     %li
-                        %a{:href => '/photos', :class => "#{@photos_active}"}photos
+                        %a{:href => '/rsvp', :class => "#{@rsvp_active}"}rsvp
                     %li
                         %a{:href => '/registry', :class => "#{@registry_active}"}registry
+                    %li
+                        %a{:href => '/photos', :class => "#{@photos_active}"}vegas photos
             =yield
         %p
             &nbsp;
