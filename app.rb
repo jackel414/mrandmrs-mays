@@ -11,9 +11,13 @@ class MrandMrsMays < Sinatra::Base
     get '/' do
         @title = 'The Mays Wedding | Home'
         @home_active = 'active'
+        
+        #generate countdown
         @eventDate = Date.parse("08/29/2015")
-        @currentDate = DateTime.now
-        @daysToEvent = (@eventDate - @currentDate).to_i
+        @currentDateString = Time.now.strftime("%Y-%m-%d")
+        @currentDate = Date.parse(@currentDateString)
+        @daysToEvent = (@eventDate - @currentDate)
+        
         haml :index
     end
     
@@ -25,6 +29,7 @@ class MrandMrsMays < Sinatra::Base
     
     get '/rsvp' do
         @title = 'The Mays Wedding | RSVP'
+        @rsvp_active = 'active'
         haml :rsvp
     end
     

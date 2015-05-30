@@ -92,7 +92,7 @@ body {
     height: 95px;
     width: 209px;
     border: 1px solid #cccccc;
-    margin: 20px auto;
+    margin: 50px auto;
 }
 
 #registry-box p {
@@ -102,6 +102,11 @@ body {
 
 #registry-box a {
     color: #666666;
+}
+
+#registry-box a:hover {
+    color: #cccccc;
+    text-decoration: none;
 }
 
 #registry-box:hover {
