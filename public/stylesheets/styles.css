@@ -112,3 +112,7 @@ body {
 #registry-box:hover {
     cursor: pointer;
 }
+
+#carousel {
+    margin-top: 40px;
+}
