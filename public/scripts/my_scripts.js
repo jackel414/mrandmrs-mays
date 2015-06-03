@@ -106,4 +106,12 @@ $(function() {
         onCreate: null            // Function that will be called after the carousel has been created. Receives a map of all data.
     });
     */
+    
+    $("#dropdown-root").hover(function(e) {
+        e.preventDefault();
+        console.log('test');
+        $(".sub-menu").fadeToggle(300);
+    });
+
+
 });

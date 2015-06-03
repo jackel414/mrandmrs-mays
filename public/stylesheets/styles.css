@@ -40,6 +40,10 @@ body {
     font-family: 'Alex Brush', cursive;
 }
 
+.cursive a {
+    color: #333;
+}
+
 .top-buffer {
     margin-top: 40px;
 }
@@ -107,6 +111,27 @@ body {
 
 .question-header {
     margin: 40px 0 10px;
+}
+
+.sub-menu {
+    display: none;
+	position: absolute;
+	width: 220px;
+	padding: 0px 10px 10px 10px;
+	background: white;
+	z-index: 99;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.17);
+}
+
+.sub-menu li {
+	text-align: left;
+	list-style: none;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+
+.sub-menu li a:hover {
+    text-decoration: none;
 }
 
 

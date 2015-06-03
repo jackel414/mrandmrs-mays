@@ -25,8 +25,15 @@
                 %ul{:class => 'nav'}
                     %li
                         %a{:href => '/', :class => "#{@home_active} large-paragraph"}our wedding
-                    %li
+                    %li{:id => 'dropdown-root'}
                         %a{:href => '/details', :class => "#{@details_active} large-paragraph"}details
+                        %ul{:class => 'sub-menu text-left'}
+                            %li
+                                %a{:href => '/details#venue'}the venue
+                            %li
+                                %a{:href => '/details#calendar'}calendar of events
+                            %li
+                                %a{:href => '/details#faq'}what you need to know
                     %li
                         %a{:href => '/rsvp', :class => "#{@rsvp_active} large-paragraph"}rsvp
                     %li
