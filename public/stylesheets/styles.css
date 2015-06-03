@@ -1,6 +1,5 @@
+/****** GENERAL ********/
 
-html {
-}
 
 body {
     font-family: 'Muli', sans-serif;
@@ -37,6 +36,18 @@ body {
     background: none;
 }
 
+.cursive {
+    font-family: 'Alex Brush', cursive;
+}
+
+.top-buffer {
+    margin-top: 40px;
+}
+
+
+/******** HOME PAGE *******/
+
+
 .home-outer-container {
     height: 650px;
 }
@@ -65,13 +76,9 @@ body {
     
 }
 
-.cursive {
-    font-family: 'Alex Brush', cursive;
-}
 
-.top-buffer {
-    margin-top: 40px;
-}
+/******** DETAILS PAGE *******/
+
 
 #house-pic {
   	background: url('/img/house.jpg') no-repeat center top;
@@ -84,9 +91,27 @@ body {
   	height: 100px;
 }
 
+.schedule-day {
+    margin-top: 30px;
+}
+
+.schedule-attire {
+    color: #a6a6a6;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.schedule-big {
+    font-size: 18px;
+}
+
 .question-header {
     margin: 40px 0 10px;
 }
+
+
+/******** REGISTRY *******/
+
 
 #registry-box {
     height: 95px;
@@ -113,10 +138,10 @@ body {
     cursor: pointer;
 }
 
+
+/******** VEGAS PHOTOS *******/
+
+
 #carousel {
     margin-top: 40px;
-}
-
-.schedule-day {
-    margin-top: 20px;
 }
