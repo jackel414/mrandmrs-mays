@@ -167,6 +167,10 @@ body {
 /******** VEGAS PHOTOS *******/
 
 
-#carousel {
-    margin-top: 40px;
+.carousel {
+    margin: 40px auto;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: black;
 }
