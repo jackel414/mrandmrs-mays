@@ -36,7 +36,7 @@ class MrandMrsMays < Sinatra::Base
     post '/submit_song' do
         @song = Song.new(:song_name => params[:song_name], :requestor => params[:requestor], :created => Time.now)
         @song.save
-        return 'Thanks for the suggestion!'
+        return 'Great suggestion, don\'t stop now!'
     end
     
     post '/rsvp' do

@@ -48,11 +48,10 @@ $(function() {
 			$(songResponseText).text(response);
 			$(songResponse).show();
 
-
 			$('#song_name').val('');
 			$('#requestor').val('');
 		}).fail(function(data) {
-  		$(songResponse).show();  		
+  		    $(songResponse).show();  		
 			if (data.responseText !== '') {
 			  $(songResponseText).text(data.responseText);
 			} else {
